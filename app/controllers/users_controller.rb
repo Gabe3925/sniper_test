@@ -8,6 +8,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "Account created successfully!"
+      # Tell the UserMailer to send a welcome email after save
+        UserMailer.welcome_email(@user).deliver_now
       redirect_to @user
     else
       flash[:danger] = "Oops! There's been a problem!"
