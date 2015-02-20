@@ -7,15 +7,17 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      # saved
+      flash[:success] = "Account created successfully!"
+      redirect_to @user
     else
+      flash[:danger] = "Oops! There's been a problem!"
       render 'new'
     end
   end
 
   def show
     @user = User.find(params[:id])
-    debugger
+    #debugger
   end
 
   private
