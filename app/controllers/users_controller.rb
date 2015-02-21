@@ -10,6 +10,7 @@ class UsersController < ApplicationController
       flash[:success] = "Account created successfully!"
       # Tell the UserMailer to send a welcome email after save
         UserMailer.welcome_email(@user).deliver_now
+        #return to user 
       redirect_to @user
     else
       flash[:danger] = "Oops! There's been a problem!"
