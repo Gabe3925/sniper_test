@@ -44,8 +44,8 @@ Rails.application.configure do
   address:              'smtp.gmail.com',
   port:                 587,
   domain:               'blahblah.com',
-  user_name:            'Sniper.welcome',
-  password:             '==========================put password here=============================',
+  user_name:            ENV["MAIL_USERNAME"],
+  password:             ENV["MAIL_PASSWORD"],
   authentication:       'plain',
   enable_starttls_auto: true  }
 end
