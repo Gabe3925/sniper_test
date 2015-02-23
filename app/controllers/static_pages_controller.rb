@@ -11,5 +11,14 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def pricing
+  end
+
+  def strategy
+  end
+
+  def disclaimer
+  end
   
 end
