@@ -22,15 +22,55 @@
     </div>
   </div>
 
-  
 
   <div class="col-md-4">
-  	<h3>In Sight</h3>
-  	Add a Target	
-  	Current Targets
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">In Your Scope</h3>
+      </div>
+      <div class="panel-body">
+      
+      <ul class="list-group">
+      <li class="list-group-item">
+        <span class="badge">0</span>
+        <%= link_to "Current Targets", "#"  %>
+      </li>
+      <li class="list-group-item">
+        <%= link_to "Add a Target", "#"  %>
+      </li>
+      </ul>
+
+      </div>
+    </div>
   </div>
 
+
   <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Your Account Information</h3>
+      </div>
+      <div class="panel-body">
+      
+      <ul class="list-group">
+      <li class="list-group-item">
+       Name: <%= @user.name.capitalize %>
+      </li>
+      <li class="list-group-item">
+        Email: <%= @user.email %>
+      </li>
+      <li class="list-group-item">
+        Ebay Handle: 
+      </li>
+      </ul>
+
+      </div>
+    </div>
+  </div>
+
+  
+
+    <div class="col-md-4">
 	<h3>Account Information</h3>
 	<ul class="list-group">
       <li class="list-group-item">Name: <%= @user.name.capitalize %></li>
