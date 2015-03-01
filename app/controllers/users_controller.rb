@@ -24,6 +24,14 @@ class UsersController < ApplicationController
     #debugger
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def delete
+    @user = User.find(params[:id])
+  end
+
   private
 
     def user_params
